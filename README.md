@@ -17,7 +17,7 @@ and should be flexible to user input.
   
   > can be installed via pip, Conda, etc.
   
-  `pip3 install os sys`
+  > `pip3 install os sys`
 * GCC and G++ package
 
   > on Ubuntu, commands already exist
