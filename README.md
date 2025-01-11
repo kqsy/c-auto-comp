@@ -15,9 +15,9 @@ and should be flexible to user input.
 * Have Python[3] installed
 * Libraries _os_ and _sys_
   
-  > can be installed via pip, Conda, etc.
+can be installed via pip, Conda, etc.
   
-  > `pip3 install os sys`
+`pip3 install os sys`
 * GCC and G++ package
 
   > on Ubuntu, commands already exist
