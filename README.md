@@ -1,11 +1,11 @@
 # c autocomp
-==
+============
 An automation of the command line compilation process for C and C++ files.
 
---
+--------------------------------------------------------------------------
 
 # Function
-==
+==========
 Script takes an input file,
 parses the name, and constructs
 the appropriate command to compile
@@ -14,7 +14,7 @@ File submission is very dynamic
 and should be flexible to user input.
 
 # Prerequisites
-==
+===============
 * Have Python[3] installed
 * Libraries _os_ and _sys_
 * GCC and G++ package
