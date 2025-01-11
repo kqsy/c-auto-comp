@@ -24,5 +24,5 @@ and should be flexible to user input.
   
   > on Windows, user will need to install
   [w64devkit](https://github.com/skeeto/w64devkit/releases/latest)
-  and add <u>w64devkit\bin</u> to "Path" in Environment Variables
+  and add **w64devkit\bin** to "Path" in Environment Variables
   
