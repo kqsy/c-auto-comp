@@ -1,4 +1,4 @@
-# c autocomp
+# C[++] AutoComp
 An automation of the command line compilation process for C and C++ files.
 
 --------------------------------------------------------------------------
@@ -14,6 +14,8 @@ and should be flexible to user input.
 # Prerequisites
 * Have Python[3] installed
 * Libraries _os_ and _sys_
+  > can be installed via pip[3], Conda, etc.
+  
 * GCC and G++ package
 
   > on Ubuntu, commands already exist
