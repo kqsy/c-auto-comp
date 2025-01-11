@@ -10,6 +10,9 @@ the appropriate command to compile
 the new file.
 File submission is very dynamic
 and should be flexible to user input.
+Can type absolute or relative path to file (if in same directory),
+paste directories, drag-and-drop a file, or open a c or c++ file
+with the script to compile it.
 
 # Prerequisites
 * Have Python[3] installed
