@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, subprocess
 
 conversion = {"c": "gcc", "cpp": "g++"} # associating appropriate language w/ compiler
 try:
@@ -20,8 +20,18 @@ try:
     compiler = conversion[filetype]
     if (" " in filepath):
         filepath = f'"{filepath}"' # dir space handeling
-    command = f"{compiler} -o {filename}.exe {filepath}"
-    os.system(command) # equivalent to running command in terminal
+    command = subprocess.Popen(f"{compiler} -o {filename}.exe {filepath}", # equivalent to running command in terminal,
+        shell=True, stdin=-1, stdout=-1, stderr=-1) # but as a hidden subprocess of this script / process
+    execute = f"{filename}.exe" # add "start" to beginning of command if having issues
+    returned = str(command.stdout.read() + command.stderr.read())[2:-1] # gets command response from Popen function as a string
+    exists = os.path.exists(os.path.join(os.path.curdir, f"{filename}.exe"))
+    if (returned == ""):
+        if (exists): # checks if file was compiled to current path
+            os.system(execute) # runs script after compiling
+        else:
+            sys.exit("Could not locate compiled file")
+    else:
+        sys.exit(returned)
 except KeyboardInterrupt:
     sys.exit("\n\nA key was pressed") # handles user keystroke inputs like Ctrl+C, Ctrl+X, etc.
 except Exception as e:
