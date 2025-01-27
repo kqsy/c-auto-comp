@@ -16,7 +16,7 @@ with the script to compile it.
 
 # Prerequisites
 * Have Python[3] installed
-* Libraries _os_ and _sys_
+* Libraries _os_, _sys_ and _subprocess_
   
   can be installed via pip, Conda, etc.
   
