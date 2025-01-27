@@ -20,7 +20,7 @@ with the script to compile it.
   
   can be installed via pip, Conda, etc.
   
-  `pip3 install os sys`
+  `pip3 install os sys subprocess`
 * GCC and G++ package
 
   > on Ubuntu, commands already exist
