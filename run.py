@@ -35,4 +35,4 @@ try:
 except KeyboardInterrupt:
     sys.exit("\n\nA key was pressed") # handles user keystroke inputs like Ctrl+C, Ctrl+X, etc.
 except Exception as e:
-    sys.exit(str(e)) # displays error message to user as exit code, upon closing
+    sys.exit(e) # displays error message to user as exit code, upon closing
