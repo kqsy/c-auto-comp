@@ -24,7 +24,7 @@ try:
         shell=True, stdin=-1, stdout=-1, stderr=-1) # but as a hidden subprocess of this script / process
     execute = f"{filename}.exe" # add "start" to beginning of command if having issues
     returned = str(command.stdout.read() + command.stderr.read())[2:-1] # gets command response from Popen function as a string
-    exists = os.path.exists(os.path.join(os.path.curdir, f"{filename}.exe"))
+    exists = os.path.exists(os.path.join(os.path.curdir, f"{filename}.exe")) # could use execute variable, here, if unchanged
     if (returned == ""):
         if (exists): # checks if file was compiled to current path
             os.system(execute) # runs script after compiling
