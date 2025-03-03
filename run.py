@@ -12,7 +12,7 @@ try:
     filepath = os.path.normpath(filepath) # standardizing how path string is written
     file = filepath.split("\\")[-1] # gets solely filename + extension
     filename = ".".join(str(sect) for sect in file.split(".")[:-1]) # isolates script name & handles reconstructing titles like "ex1.3.c"
-    filetype = file.split(".")[-1] # gets file extension / filetype from <file> string
+    filetype = file.split(".")[-1].lower() # gets file extension / filetype from <file> string
     if (filetype not in conversion): # thrown if input file-to-convert is not C or C++
         sys.exit("Invalid file type") # closing script, as to not try to convert other filetypes
     if (not os.path.exists(filepath)): # gets handled by compiler(s), as well
